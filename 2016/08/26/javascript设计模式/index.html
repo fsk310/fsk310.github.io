@@ -5,12 +5,16 @@
   
   <title>Paul Fang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="单例模式单例模式的对象只会被创建一个，例如webqq的登录窗口，在正常情况下有且仅有一个。123456789var ProxySingleton = (function  () &amp;#123;    var instance;    return function  (obj) &amp;#123;        // 这里使用了闭包的一些特性        if(!instance)&amp;#123;">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Paul Fang's Blog">
-<meta property="og:url" content="http://fsk310.github.io/index.html">
+<meta property="og:url" content="http://fsk310.github.io/2016/08/26/javascript设计模式/index.html">
 <meta property="og:site_name" content="Paul Fang's Blog">
+<meta property="og:description" content="单例模式单例模式的对象只会被创建一个，例如webqq的登录窗口，在正常情况下有且仅有一个。123456789var ProxySingleton = (function  () &amp;#123;    var instance;    return function  (obj) &amp;#123;        // 这里使用了闭包的一些特性        if(!instance)&amp;#123;">
+<meta property="og:updated_time" content="2016-08-26T05:28:59.124Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paul Fang's Blog">
+<meta name="twitter:description" content="单例模式单例模式的对象只会被创建一个，例如webqq的登录窗口，在正常情况下有且仅有一个。123456789var ProxySingleton = (function  () &amp;#123;    var instance;    return function  (obj) &amp;#123;        // 这里使用了闭包的一些特性        if(!instance)&amp;#123;">
   
     <link rel="alternate" href="/atom.xml" title="Paul Fang&#39;s Blog" type="application/atom+xml">
   
@@ -63,9 +67,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-javascript设计模式" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-javascript设计模式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/08/26/javascript设计模式/" class="article-date">
   <time datetime="2016-08-26T05:28:10.039Z" itemprop="datePublished">2016-08-26</time>
@@ -93,58 +95,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Hexo搭建Github静态博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/08/26/Hexo搭建Github静态博客/" class="article-date">
-  <time datetime="2016-08-26T03:13:21.237Z" itemprop="datePublished">2016-08-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/26/Hexo搭建Github静态博客/">Hexo搭建Github静态博客</a>
-    </h1>
+    <a href="/2016/08/26/Hexo搭建Github静态博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo搭建Github静态博客</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>想来想去都不知道第一篇写些什么，就说说我怎么搭建起这个吧。</p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>Hexo是一款基于Node.js的静态博客框架,因此需要在本地有Node.js的环境，使用npm安装Hexo。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure></p>
-<h3 id="创建博客目录"><a href="#创建博客目录" class="headerlink" title="创建博客目录"></a>创建博客目录</h3><p>也就是你的Hexo文件夹，在该文件夹下面执行hexo初始化命令就可以自动建立网站所需要的文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
-<h3 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a>本地查看</h3><p>到这里就已经搭建起本地的hexo博客了。执行以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
-<p>通过浏览器访问localhost:4000查看。</p>
-<h3 id="配置github相关设置，完成部署"><a href="#配置github相关设置，完成部署" class="headerlink" title="配置github相关设置，完成部署"></a>配置github相关设置，完成部署</h3><p>首先修改_config.yml文件,如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  <span class="comment">#下面的地址是你的博客Repository的地址</span></div><div class="line">  repository: https://github.com/fsk310/fsk310.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
-<p>接着安装Hexo部署到Github的相关插件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>接着要设置SSH keys相关，以下只列出执行命令，相关知识不做描述。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"fsk310@hotmail.com"</span> <span class="comment">#这里的邮箱地址是你的github注册的邮箱地址</span></div><div class="line">ssh-agent <span class="_">-s</span></div><div class="line">ssh-add ~/.ssh/id_rsa</div><div class="line"><span class="comment">#如果你的也是这样子出错了的话，就输入以下指令</span></div><div class="line"><span class="built_in">eval</span> `ssh-agent <span class="_">-s</span>`</div><div class="line">ssh-add</div><div class="line"><span class="comment">#最后复制 ~/.ssh/id_rsa.pub 这个文件的内容</span></div><div class="line">clip &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
-<p>接着在GitHub里面增加ssh key<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
-<p>最后执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
-<p>就完成部署GitHub静态博客了。</p>
-<p>参考资料:<br> <a href="http://jingyan.baidu.com/article/d8072ac47aca0fec95cefd2d.html" target="_blank" rel="external">史上最详细“截图”搭建Hexo博客并部署到Github</a><br> <a href="http://www.jianshu.com/p/5e0ca2b14815" target="_blank" rel="external">升级hexo碰到“Deployer not found”问题及解决</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://fsk310.github.io/2016/08/26/Hexo搭建Github静态博客/" data-id="cisbbgk9h00002kmhjkgyv96l" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
